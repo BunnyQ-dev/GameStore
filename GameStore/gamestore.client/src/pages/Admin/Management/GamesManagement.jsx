@@ -42,13 +42,13 @@ const GamesManagement = () => {
     navigate('/admin/games/create');
   };
   const handleDelete = async (id) => {
-      if (!window.confirm('Ви впевнені, що хочете видалити цю гру?')) return;
+      if (!window.confirm('Are you sure you want to delete this game?')) return;
       try {
         await axios.delete(`/api/admin/games/${id}`); 
-        dispatch(addNotification({ message: 'Гру успішно видалено', type: 'success' }));
+        dispatch(addNotification({ message: 'Game deleted successfully', type: 'success' }));
         fetchGames(); 
       } catch (err) {
-         const errorMsg = err.response?.data?.message || 'Помилка видалення гри.';
+         const errorMsg = err.response?.data?.message || 'Error deleting game.';
          dispatch(addNotification({ message: errorMsg, type: 'error' }));
       }
   };

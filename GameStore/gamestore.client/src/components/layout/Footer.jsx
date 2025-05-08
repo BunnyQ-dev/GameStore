@@ -87,34 +87,34 @@ const Footer = () => {
         <FooterSection>
           <FooterTitle>Store</FooterTitle>
           <FooterLink to="/store">Home</FooterLink>
-          <FooterLink to="/store/categories">Categories</FooterLink>
-          <FooterLink to="/store/new-releases">New Releases</FooterLink>
-          <FooterLink to="/store/top-sellers">Top Sellers</FooterLink>
-          <FooterLink to="/store/special-offers">Special Offers</FooterLink>
+          <FooterLink to="#">Categories</FooterLink>
+          <FooterLink to="#">New Releases</FooterLink>
+          <FooterLink to="#">Top Sellers</FooterLink>
+          <FooterLink to="#">Special Offers</FooterLink>
         </FooterSection>
         
         <FooterSection>
           <FooterTitle>About Us</FooterTitle>
-          <FooterLink to="/about">About GameStore</FooterLink>
-          <FooterLink to="/about/careers">Careers</FooterLink>
-          <FooterLink to="/about/press">Press</FooterLink>
-          <FooterLink to="/about/privacy">Privacy Policy</FooterLink>
-          <FooterLink to="/about/legal">Legal Information</FooterLink>
+          <FooterLink to="#">About GameStore</FooterLink>
+          <FooterLink to="#">Careers</FooterLink>
+          <FooterLink to="#">Press</FooterLink>
+          <FooterLink to="#">Privacy Policy</FooterLink>
+          <FooterLink to="#">Legal Information</FooterLink>
         </FooterSection>
         
         <FooterSection>
           <FooterTitle>Support</FooterTitle>
-          <FooterLink to="/support">Support Center</FooterLink>
-          <FooterLink to="/support/faq">FAQ</FooterLink>
-          <FooterLink to="/support/contact">Contact Us</FooterLink>
-          <FooterLink to="/support/refunds">Refund Policy</FooterLink>
+          <FooterLink to="#">Support Center</FooterLink>
+          <FooterLink to="#">FAQ</FooterLink>
+          <FooterLink to="#">Contact Us</FooterLink>
+          <FooterLink to="#">Refund Policy</FooterLink>
         </FooterSection>
         
         <FooterSection>
           <FooterTitle>Community</FooterTitle>
-          <FooterLink to="/community">Community Hub</FooterLink>
-          <FooterLink to="/community/forums">Forums</FooterLink>
-          <FooterLink to="/community/workshops">Workshops</FooterLink>
+          <FooterLink to="#">Community Hub</FooterLink>
+          <FooterLink to="#">Forums</FooterLink>
+          <FooterLink to="#">Workshops</FooterLink>
           <SocialLinks>
             <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
               <FaGithub />

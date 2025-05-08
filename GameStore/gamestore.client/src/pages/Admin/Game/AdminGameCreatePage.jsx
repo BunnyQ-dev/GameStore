@@ -86,7 +86,7 @@ const AdminGameCreatePage = () => {
         setPlatforms(platRes.data.map(p => ({ value: p.id, label: p.name })));
       } catch (err) {
         console.error(err);
-        dispatch(addNotification({ message: 'Помилка завантаження довідників', type: 'error' }));
+        dispatch(addNotification({ message: 'Error loading references', type: 'error' }));
       } finally { setLoading(false); }
     };
     fetchRefs();
@@ -110,12 +110,12 @@ const AdminGameCreatePage = () => {
     e.preventDefault();
     setError(null);
     if (!formData.developerId) {
-      const msg = 'Виберіть розробника';
+      const msg = 'Select a developer';
       dispatch(addNotification({ message: msg, type: 'error' }));
       return;
     }
     if (!formData.publisherId) {
-      const msg = 'Виберіть видавця';
+      const msg = 'Select a publisher';
       dispatch(addNotification({ message: msg, type: 'error' }));
       return;
     }
@@ -142,11 +142,11 @@ const AdminGameCreatePage = () => {
     try {
       const res = await axios.post('/api/admin/games', payload);
       const newId = res.data.id || res.data.Id;
-      dispatch(addNotification({ message: 'Гру успішно створено', type: 'success' }));
+      dispatch(addNotification({ message: 'Game created successfully', type: 'success' }));
       navigate(`/admin/games/edit/${newId}`);
     } catch (err) {
       console.error(err);
-      const msg = err.response?.data?.message || 'Помилка створення гри.';
+      const msg = err.response?.data?.message || 'Error creating game.';
       setError(msg);
       dispatch(addNotification({ message: msg, type: 'error' }));
     }

@@ -137,17 +137,17 @@ const GenresManagement = () => {
   };
 
   const handleDelete = async (id) => {
-    if (!window.confirm('Ви впевнені, що хочете видалити цей жанр? Це може бути неможливо, якщо він використовується.')) {
+    if (!window.confirm('Are you sure you want to delete this genre? This may not be possible if it is being used.')) {
       return;
     }
     setError(null);
     try {
       await axios.delete(`/api/admin/manage/genres/${id}`);
-      dispatch(addNotification({ message: 'Жанр успішно видалено', type: 'success' }));
+      dispatch(addNotification({ message: 'Genre deleted successfully', type: 'success' }));
       fetchGenres(); 
     } catch (err) {
       console.error("Error deleting genre:", err);
-      const errorMsg = err.response?.data?.message || 'Помилка видалення жанру.';
+      const errorMsg = err.response?.data?.message || 'Error deleting genre.';
       dispatch(addNotification({ message: errorMsg, type: 'error' }));
     }
   };

@@ -60,7 +60,7 @@ const UsersManagement = () => {
   const handleSave = async () => {
     try {
       await axios.put(`/api/admin/manage/users/${form.userId}`, { roles: form.roles, isActive: form.isActive });
-      dispatch(addNotification({ message: 'Користувача оновлено', type: 'success' }));
+      dispatch(addNotification({ message: 'User updated successfully', type: 'success' }));
       closeModal(); fetchUsers();
     } catch (err) {
       console.error(err);

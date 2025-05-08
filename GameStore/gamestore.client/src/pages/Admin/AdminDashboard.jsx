@@ -41,15 +41,15 @@ const AdminDashboard = () => {
       return;
     }
 
-    // Перевіряємо, чи user вже завантажений. Якщо ні, то не перевіряємо ролі одразу
+    // Check if user is already loaded. If not, don't check roles immediately
     if (!user) {
-        setIsLoadingUser(true); // Можливо, дані ще завантажуються
+        setIsLoadingUser(true); // Maybe data is still loading
         return; 
     } else if (isLoadingUser) {
         setIsLoadingUser(false); 
     }
 
-    // Тепер перевіряємо ролі, тільки якщо user НЕ null
+    // Now check roles, only if user is not null
     if (!user.roles?.includes('Admin')) {
       navigate('/');
       dispatch(addNotification({
@@ -79,7 +79,7 @@ const AdminDashboard = () => {
     fetchDashboardData();
   }, [isAuthenticated, user, dispatch, navigate]);
 
-  // Додаємо відображення завантаження, поки user не завантажиться
+  // Add loading display while user is loading
   if (isLoadingUser && isAuthenticated) {
       return <AdminContainer><div>Loading user data...</div></AdminContainer>; 
   }

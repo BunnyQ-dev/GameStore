@@ -38,7 +38,7 @@ const AdminOrderDetailsPage = () => {
         setOrder(res.data);
       } catch (err) {
         console.error('Error fetching order:', err);
-        setError('Не вдалося завантажити замовлення.');
+        setError('Error loading order.');
       } finally {
         setLoading(false);
       }
