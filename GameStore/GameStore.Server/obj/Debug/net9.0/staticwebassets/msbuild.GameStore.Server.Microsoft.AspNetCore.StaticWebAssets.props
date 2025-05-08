@@ -1,0 +1,76 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GameStore.Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GameStore.Server</BasePath>
+      <RelativePath>uploads/avatars/15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>9oi0o4q04m</Fingerprint>
+      <Integrity>d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\c7659235-b62b-4437-af9b-ff43acc37b4a.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GameStore.Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GameStore.Server</BasePath>
+      <RelativePath>uploads/avatars/c7659235-b62b-4437-af9b-ff43acc37b4a.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>63dmf45uew</Fingerprint>
+      <Integrity>PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\c7659235-b62b-4437-af9b-ff43acc37b4a.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GameStore.Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GameStore.Server</BasePath>
+      <RelativePath>uploads/avatars/e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>r8kdz9uc8d</Fingerprint>
+      <Integrity>u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>GameStore.Server</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GameStore.Server</BasePath>
+      <RelativePath>uploads/avatars/fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hgee3sakbs</Fingerprint>
+      <Integrity>T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\avatars\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

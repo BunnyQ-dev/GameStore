@@ -1,0 +1,116 @@
+/* Login.css */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 4rem);
+  padding: 4rem 1rem;
+}
+
+.login-container {
+  background-color: #1e2d40;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #324154;
+  border-radius: 0.375rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 24rem;
+  margin: auto;
+  transition: box-shadow 0.2s ease;
+}
+
+.login-container:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.login-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #66c0f4;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-error {
+  background-color: #991b1b; /* red-700 */
+  color: #fef2f2;          /* red-100 */
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+}
+
+.login-form {
+  margin: 0;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #374151; /* gray-700 */
+  color: #f9fafb;           /* gray-100 */
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.login-input::placeholder {
+  color: #9ca3af; /* gray-400 */
+}
+
+.login-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #66c0f4;
+}
+
+.login-remember {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-checkbox {
+  margin-right: 0.5rem;
+  accent-color: #66c0f4;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: linear-gradient(to br, #75b0d5, #588fad);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.login-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.login-link {
+  display: block;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 1rem;
+}
+
+.login-link a {
+  color: #66c0f4;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  color: #ffffff;
+} 

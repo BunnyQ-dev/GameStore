@@ -1,0 +1,446 @@
+{
+  "Version": 1,
+  "Hash": "L3f6xNx4DTKH+8UCQ804Zn9YUIW6Eaxy7kosbPacNAc=",
+  "Source": "GameStore.Server",
+  "BasePath": "_content/GameStore.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\GameStore\\GameStore\\gamestore.client\\gamestore.client.esproj",
+      "Version": 2,
+      "Source": "gamestore.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GameStore.Server\\wwwroot",
+      "Source": "GameStore.Server",
+      "ContentRoot": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\",
+      "BasePath": "_content/GameStore.Server",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg",
+      "SourceId": "GameStore.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\",
+      "BasePath": "_content/GameStore.Server",
+      "RelativePath": "uploads/avatars/15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "9oi0o4q04m",
+      "Integrity": "d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\avatars\\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg"
+    },
+    {
+      "Identity": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\c7659235-b62b-4437-af9b-ff43acc37b4a.png",
+      "SourceId": "GameStore.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\",
+      "BasePath": "_content/GameStore.Server",
+      "RelativePath": "uploads/avatars/c7659235-b62b-4437-af9b-ff43acc37b4a#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "63dmf45uew",
+      "Integrity": "PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\avatars\\c7659235-b62b-4437-af9b-ff43acc37b4a.png"
+    },
+    {
+      "Identity": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg",
+      "SourceId": "GameStore.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\",
+      "BasePath": "_content/GameStore.Server",
+      "RelativePath": "uploads/avatars/e411efb1-bc4e-4357-a892-51f3af3a3a4d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r8kdz9uc8d",
+      "Integrity": "u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\avatars\\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg"
+    },
+    {
+      "Identity": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg",
+      "SourceId": "GameStore.Server",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\",
+      "BasePath": "_content/GameStore.Server",
+      "RelativePath": "uploads/avatars/fba9df56-83ba-443f-bec7-ea6af9cbd85d#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hgee3sakbs",
+      "Integrity": "T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\avatars\\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "uploads/avatars/15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.9oi0o4q04m.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62920"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:58:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "9oi0o4q04m"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\15bd848d-ba6d-48fc-9adb-a2dc8d8a8be8.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "62920"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 12:58:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-d1m606ZfL4jvWq3+tXotqPMXyTPyR/nbIS71HCYhtG4="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/c7659235-b62b-4437-af9b-ff43acc37b4a.63dmf45uew.png",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\c7659235-b62b-4437-af9b-ff43acc37b4a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "433498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 15:02:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "63dmf45uew"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/c7659235-b62b-4437-af9b-ff43acc37b4a.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/c7659235-b62b-4437-af9b-ff43acc37b4a.png",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\c7659235-b62b-4437-af9b-ff43acc37b4a.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "433498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 15:02:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-PkXQUUaGXsi7lV9ETx3ZFezAj9sxRbONIuElBjfYKvI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 13:40:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/e411efb1-bc4e-4357-a892-51f3af3a3a4d.r8kdz9uc8d.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "101665"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 13:40:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r8kdz9uc8d"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/e411efb1-bc4e-4357-a892-51f3af3a3a4d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u07lH+EODf4BpdZaW/L/moAdeLhV18xaBbx3wAdpVno="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/fba9df56-83ba-443f-bec7-ea6af9cbd85d.hgee3sakbs.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49554"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 19:15:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hgee3sakbs"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/avatars/fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/avatars/fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg",
+      "AssetFile": "E:\\GameStore\\GameStore\\GameStore.Server\\wwwroot\\uploads\\avatars\\fba9df56-83ba-443f-bec7-ea6af9cbd85d.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "49554"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 05 May 2025 19:15:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T0wg1IOkr6LPh3J31tv5fBu+/IACEolhmY7VKptjQe0="
+        }
+      ]
+    }
+  ]
+}

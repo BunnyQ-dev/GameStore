@@ -1,0 +1,138 @@
+.reviews-section {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #374151; /* gray-700 */
+}
+
+.review-form {
+  background-color: #1e2d40; /* Темний фон для форми */
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #324154;
+  margin-bottom: 2rem;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: #374151; /* gray-700 */
+  color: #f9fafb; /* gray-100 */
+  border: 1px solid #4b5563; /* gray-600 */
+  resize: vertical; /* Дозволити змінювати розмір по вертикалі */
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #66c0f4;
+  box-shadow: 0 0 0 2px rgba(102, 192, 244, 0.5);
+}
+
+.review-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Star Rating Component */
+.star-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star-rating .star {
+  font-size: 1.5rem; /* Розмір зірочок */
+  color: #4b5563; /* gray-600 - колір порожніх */
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star-rating .star.filled {
+  color: #facc15; /* yellow-400 - колір заповнених */
+}
+
+.star-rating.read-only .star {
+  cursor: default;
+}
+
+/* Review List */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.review-item {
+  background-color: #1f2937; /* gray-800 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #374151;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.review-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-username {
+  font-weight: 600;
+  color: #e5e7eb; /* gray-200 */
+  text-decoration: none;
+}
+.review-username:hover {
+  text-decoration: underline;
+}
+
+.review-date {
+  font-size: 0.75rem;
+  color: #6b7280; /* gray-500 */
+  margin-left: 0.5rem;
+}
+
+.review-content {
+  padding-left: calc(40px + 0.75rem); /* Відступ зліва, як у імені */
+}
+
+.review-content .star-rating { /* Менші зірочки для списку */
+    margin-bottom: 0.5rem;
+}
+.review-content .star-rating .star {
+    font-size: 1rem;
+}
+
+.review-comment {
+  color: #d1d5db; /* gray-300 */
+  line-height: 1.6;
+  white-space: pre-wrap; /* Зберегти переноси рядків */
+}
+
+/* Стилі для кнопок (якщо ще не визначені глобально) */
+.button-primary {
+  /* ... ваші стилі ... */
+}
+.button-danger {
+  /* Стилі для кнопки видалення */
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  background-color: #dc2626; /* red-600 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.button-danger:hover {
+  background-color: #b91c1c; /* red-700 */
+} 

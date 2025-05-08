@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:61340",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "E:\\GameStore\\GameStore\\GameStore.Server\\..\\gamestore.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

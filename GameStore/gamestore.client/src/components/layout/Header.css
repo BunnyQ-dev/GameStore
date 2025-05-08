@@ -1,0 +1,26 @@
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #555;
+}
+
+.navbar-avatar {
+    width: 28px; 
+    height: 28px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 1px solid #777; 
+}
+
+.logout-button {
+    background: none;
+} 

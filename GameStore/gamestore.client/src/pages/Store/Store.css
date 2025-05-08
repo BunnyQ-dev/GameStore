@@ -1,0 +1,17 @@
+.filter-clear-button:hover {
+  background-color: #4b5563; /* gray-600 */
+}
+
+/* Стилі для повзунка ціни */
+.price-slider-container {
+  padding: 10px 5px; /* Невеликі відступи, щоб повзунок не прилипав */
+}
+
+.price-range-values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #d1d5db; /* gray-300 */
+}
+

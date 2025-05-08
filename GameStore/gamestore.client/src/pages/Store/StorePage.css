@@ -1,0 +1,183 @@
+/* StorePage.css */
+.store-page-container {
+    max-width: 1600px; /* Ще ширше для магазину з сайдбаром */
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.store-sidebar {
+    width: 250px;
+    flex-shrink: 0; /* Не стискати сайдбар */
+    background-color: #2a2a2a; /* Фон сайдбара */
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content; /* Висота за контентом */
+    position: sticky; /* Прилипання при скролі */
+    top: 80px; /* Відступ від хедера (приблизно) */
+}
+
+.store-sidebar h3 {
+    font-size: 1.4em;
+    color: #e0e0e0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.filter-section {
+    margin-bottom: 25px;
+}
+
+.filter-section h4 {
+    font-size: 1.1em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.filter-item {
+    margin-bottom: 8px;
+}
+
+.filter-item label {
+    margin-left: 8px;
+    color: #bbb;
+    cursor: pointer;
+}
+
+.filter-item input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* TODO: Додати стилі для слайдера цін */
+
+.store-content {
+    flex-grow: 1; /* Зайняти весь доступний простір */
+}
+
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #444;
+}
+
+.store-header h1 {
+    font-size: 2em;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.sort-options label {
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.sort-options select {
+    padding: 8px 12px;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.store-game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Трохи більші картки */
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+/* Стилі для пагінації (припустимо, є базовий компонент) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.pagination button {
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.pagination button.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--bg-color-tertiary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.price-inputs-container {
+    display: flex;
+    gap: 10px; /* Space between min and max inputs */
+}
+
+.price-input-group {
+    flex: 1; /* Each input takes half the space */
+}
+
+.price-input-group label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-color-secondary);
+    margin-bottom: 4px;
+}
+
+.price-input {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--bg-color-tertiary);
+    border-radius: 4px;
+    /* Remove default number input arrows (optional) */
+    -moz-appearance: textfield;
+}
+
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.price-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.store-main-content {
+    flex-grow: 1;
+} 

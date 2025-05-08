@@ -1,0 +1,91 @@
+.library-container {
+  /* Додаткові стилі для контейнера, якщо потрібно */
+}
+
+.library-game-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Щоб картки були однакової висоти */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.library-game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.library-game-card img {
+  aspect-ratio: 16 / 9; /* Або інше співвідношення для обкладинок */
+  object-fit: cover;
+}
+
+.game-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* Притискає кнопки до низу картки */
+  padding-top: 1rem; /* Відступ зверху */
+}
+
+.game-launch-button {
+  background-color: #1a73e8; /* Синій Google */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-launch-button:hover {
+  background-color: #155ab6;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  color: #9ca3af; /* Сірий */
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.favorite-button:hover {
+  color: #f59e0b; /* Жовтий/золотий для ховеру */
+}
+
+.favorite-button.is-favorite {
+  color: #ef4444; /* Червоний для активного улюбленого */
+}
+
+.favorite-button.is-favorite:hover {
+  color: #dc2626; /* Темніший червоний для ховеру активного */
+}
+
+/* Стилі для контейнера сітки бібліотеки */
+.library-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Відповідає Tailwind gap-6 */
+  /* Можна додати інші стилі, наприклад, justify-content */
+}
+
+/* Стилі для карток всередині сітки */
+.library-grid-container .game-card-link {
+  width: 100%; /* За замовчуванням - одна колонка */
+}
+
+/* 2 колонки для маленьких екранів (від 640px - Tailwind 'sm') */
+@media (min-width: 640px) {
+  .library-grid-container .game-card-link {
+    width: calc(50% - 0.75rem); /* 50% мінус половина від gap */
+  }
+}
+
+/* 3 колонки для середніх екранів (від 768px - Tailwind 'md') */
+@media (min-width: 768px) {
+  .library-grid-container .game-card-link {
+    width: calc(33.333% - 1rem); /* 33.33% мінус дві третини від gap */
+  }
+} 

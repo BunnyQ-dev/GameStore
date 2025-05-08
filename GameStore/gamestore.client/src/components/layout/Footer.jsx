@@ -1,0 +1,147 @@
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { FaGithub, FaTwitter, FaDiscord, FaFacebook, FaInstagram } from 'react-icons/fa';
+
+const FooterContainer = styled.footer`
+  background-color: var(--bg-color);
+  color: var(--text-color-secondary);
+  padding: 2rem 0;
+  margin-top: auto;
+  border-top: 1px solid var(--bg-color-tertiary);
+`;
+
+const FooterContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+`;
+
+const FooterSection = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FooterTitle = styled.h3`
+  color: var(--text-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+`;
+
+const FooterLink = styled(Link)`
+  color: var(--text-color-secondary);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  
+  &:hover {
+    color: var(--accent-color);
+  }
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+`;
+
+const SocialIcon = styled.a`
+  color: var(--text-color-secondary);
+  font-size: 1.5rem;
+  
+  &:hover {
+    color: var(--accent-color);
+  }
+`;
+
+const BottomBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--bg-color-tertiary);
+  text-align: center;
+`;
+
+const Copyright = styled.p`
+  color: var(--text-color-secondary);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+`;
+
+const ValveLogo = styled.img`
+  height: 30px;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+`;
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
+  return (
+    <FooterContainer>
+      <FooterContent>
+        <FooterSection>
+          <FooterTitle>Store</FooterTitle>
+          <FooterLink to="/store">Home</FooterLink>
+          <FooterLink to="/store/categories">Categories</FooterLink>
+          <FooterLink to="/store/new-releases">New Releases</FooterLink>
+          <FooterLink to="/store/top-sellers">Top Sellers</FooterLink>
+          <FooterLink to="/store/special-offers">Special Offers</FooterLink>
+        </FooterSection>
+        
+        <FooterSection>
+          <FooterTitle>About Us</FooterTitle>
+          <FooterLink to="/about">About GameStore</FooterLink>
+          <FooterLink to="/about/careers">Careers</FooterLink>
+          <FooterLink to="/about/press">Press</FooterLink>
+          <FooterLink to="/about/privacy">Privacy Policy</FooterLink>
+          <FooterLink to="/about/legal">Legal Information</FooterLink>
+        </FooterSection>
+        
+        <FooterSection>
+          <FooterTitle>Support</FooterTitle>
+          <FooterLink to="/support">Support Center</FooterLink>
+          <FooterLink to="/support/faq">FAQ</FooterLink>
+          <FooterLink to="/support/contact">Contact Us</FooterLink>
+          <FooterLink to="/support/refunds">Refund Policy</FooterLink>
+        </FooterSection>
+        
+        <FooterSection>
+          <FooterTitle>Community</FooterTitle>
+          <FooterLink to="/community">Community Hub</FooterLink>
+          <FooterLink to="/community/forums">Forums</FooterLink>
+          <FooterLink to="/community/workshops">Workshops</FooterLink>
+          <SocialLinks>
+            <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
+              <FaGithub />
+            </SocialIcon>
+            <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
+              <FaTwitter />
+            </SocialIcon>
+            <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
+              <FaDiscord />
+            </SocialIcon>
+            <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </SocialIcon>
+            <SocialIcon href="#" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </SocialIcon>
+          </SocialLinks>
+        </FooterSection>
+      </FooterContent>
+      
+      <BottomBar>
+        <Copyright>
+          © {currentYear} GameStore Corporation. All rights reserved. All trademarks are property of their respective owners.
+        </Copyright>
+      </BottomBar>
+    </FooterContainer>
+  );
+};
+
+export default Footer; 

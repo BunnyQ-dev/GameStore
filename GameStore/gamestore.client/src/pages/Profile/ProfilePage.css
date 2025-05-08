@@ -1,0 +1,477 @@
+/* ProfilePage.css */
+.profile-container {
+    max-width: 1000px; /* Або інша ширина */
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #1f2937; /* gray-850 */
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid #374151; /* border-gray-750 */
+}
+
+.profile-container.error-container {
+    text-align: center;
+}
+
+.profile-container.error-container h2 {
+    color: #f44336;
+    margin-bottom: 15px;
+}
+
+.profile-container.error-container .button-primary {
+    margin-top: 20px;
+}
+
+/* Header */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #374151;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .profile-header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4b5563; /* gray-600 */
+    flex-shrink: 0;
+}
+
+.profile-header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .profile-header-info {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+.profile-header-info h1 {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;
+    color: #f3f4f6; /* gray-100 */
+    margin-bottom: 0.25rem;
+}
+
+.profile-header-info .username {
+    color: #9ca3af; /* gray-400 */
+    margin-bottom: 0.5rem;
+}
+
+.profile-header-info .registration-date {
+    color: #6b7280; /* gray-500 */
+    font-size: 0.875rem; /* text-sm */
+    margin-bottom: 1rem;
+}
+
+/* --- Стилі для кнопок (використовуємо базові класи) --- */
+.button-primary, .button-secondary {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem; /* rounded-md */
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    display: inline-flex; /* Для іконок */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button-primary {
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+}
+.button-primary:hover {
+    background-color: #1d4ed8; /* blue-700 */
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+}
+
+.button-secondary {
+    background-color: #4b5563; /* gray-600 */
+    color: white;
+}
+.button-secondary:hover {
+    background-color: #374151; /* gray-700 */
+}
+
+.edit-profile-button i {
+    margin-right: 0.3rem;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    gap: 1.5rem;
+    background-color: #2d3748; /* gray-800 */
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem; /* rounded-lg */
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: space-around;
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+    .profile-stats {
+        flex-direction: column;
+        gap: 1rem;
+        width: auto;
+        margin-top: 0;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700;
+    color: #e5e7eb; /* gray-200 */
+}
+
+.stat-label {
+    font-size: 0.8rem; /* text-xs */
+    color: #9ca3af; /* gray-400 */
+    text-transform: uppercase;
+}
+
+/* Bio Section */
+.profile-bio {
+    margin-bottom: 2rem;
+}
+
+.profile-bio h2, .profile-activity h2 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600;
+    color: #e5e7eb; /* gray-200 */
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #374151;
+}
+
+.profile-bio p {
+    color: #d1d5db; /* gray-300 */
+    line-height: 1.6;
+}
+
+/* Activity Section */
+.profile-activity {
+    /* Стилі для активності */
+}
+
+/* --- Стилі для форми редагування --- */
+.profile-edit-form {
+    background-color: #2d3748; /* gray-800 */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid #4b5563; /* gray-600 */
+}
+
+.profile-edit-form h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600;
+    color: #e5e7eb; /* gray-200 */
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-label {
+    display: block;
+    color: #a0aec0; /* gray-500 */
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea,
+.form-file-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.375rem; /* rounded */
+    background-color: #1a202c; /* gray-900 */
+    color: #e2e8f0; /* gray-200 */
+    border: 1px solid #4a5568; /* border-gray-700 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Стиль для file input */
+.form-file-input::file-selector-button {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    background-color: #4b5563; /* gray-600 */
+    border: none;
+    color: white;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-file-input::file-selector-button:hover {
+    background-color: #374151; /* gray-700 */
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-file-input:focus {
+    outline: none;
+    border-color: #4299e1; /* blue-500 */
+    box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #374151;
+}
+
+/* Попередній перегляд аватара */
+.avatar-preview {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.avatar-preview img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-preview span {
+    color: #9ca3af; /* gray-400 */
+    font-size: 0.875rem;
+}
+
+/* Friendship Status Indicator */
+.friendship-status-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Відступ між статусом і кнопкою */
+    margin-top: 1rem; /* Відступ зверху, як у кнопки редагування */
+}
+
+.friendship-status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.friendship-status-indicator.accepted {
+    background-color: rgba(52, 211, 153, 0.15); /* emerald-400 з прозорістю */
+    color: #34d399; /* emerald-400 */
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+/* Менший розмір для кнопки "Видалити" поруч зі статусом */
+.button-small {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+}
+
+/* Friends Preview Section */
+.profile-friends-preview {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #1e2d40; /* Match login/register container */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 1px solid #324154;
+}
+
+.profile-friends-preview h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #e5e7eb; /* gray-200 */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #374151; /* gray-700 */
+  padding-bottom: 0.5rem;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Адаптивна сітка */
+  gap: 1rem;
+}
+
+.friend-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  background-color: #2a3f5f; /* Slightly lighter background */
+  transition: background-color 0.2s ease;
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit text color */
+}
+
+.friend-item:hover {
+  background-color: #324154; /* Darker on hover */
+}
+
+.friend-avatar {
+  width: 40px; /* Розмір аватара */
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.75rem; /* Відступ справа від аватара */
+  flex-shrink: 0; /* Запобігає зменшенню аватара */
+}
+
+.friend-info-preview { /* Новий клас для контейнера імені/статусу */
+  overflow: hidden; /* Обрізати текст, якщо не влазить */
+}
+
+.friend-name {
+  font-weight: 500;
+  color: #e5e7eb; /* gray-200 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-status-preview {
+  font-size: 0.8rem;
+  color: #9ca3af; /* gray-400 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.friend-status-preview.online {
+  color: #34d399; /* emerald-400 */
+}
+
+.friend-status-preview.in-game {
+  color: #60a5fa; /* blue-400 */
+}
+
+.view-all-friends-link {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: #66c0f4;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.view-all-friends-link:hover {
+  text-decoration: underline;
+}
+
+/* Profile Achievements */
+.profile-achievements {
+  margin-top: 2rem; /* Add space above achievements */
+}
+
+.profile-achievements h3 {
+  font-size: 1.25rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.achievements-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Similar to friends */
+  gap: 1rem;
+}
+
+.achievement-card {
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: #2a3f5f; /* Match friend item */
+  transition: background-color 0.2s ease;
+  cursor: help; /* Indicate tooltip */
+}
+
+.achievement-card:hover {
+  background-color: #324154; /* Match friend item hover */
+}
+
+.achievement-icon {
+  width: 50px; /* Slightly smaller */
+  height: 50px;
+  border-radius: 50%; /* Make icons circular */
+  object-fit: cover;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+.achievement-info {
+  overflow: hidden; /* Cut off long text */
+}
+
+.achievement-name {
+  font-weight: 500;
+  color: #e5e7eb; /* gray-200 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.15rem;
+}
+
+.achievement-description {
+  font-size: 0.8rem;
+  color: #9ca3af; /* gray-400 */
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) { /* md breakpoint */
+    .profile-header {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+} 

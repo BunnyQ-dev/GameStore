@@ -1,0 +1,97 @@
+.friend-item-avatar {
+  /* ... */
+}
+
+/* --- Стилі секції досягнень --- */
+.achievements-section {
+  margin-top: 2rem;
+}
+
+.achievements-grid {
+  display: flex;
+  flex-direction: column; /* Один стовпець за замовчуванням */
+  gap: 1rem;
+}
+
+.achievement-item {
+  background-color: rgba(255, 255, 255, 0.05); /* Легкий фон */
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.achievement-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.achievement-game-link {
+  flex-shrink: 0;
+}
+
+.achievement-game-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.achievement-details {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.achievement-icon-container {
+  flex-shrink: 0;
+}
+
+.achievement-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* Або cover, залежно від іконок */
+  border-radius: 50%;
+  background-color: #4b5563; /* Фон для нерозблокованих */
+}
+
+.achievement-icon.unlocked {
+  background-color: transparent; /* Забираємо фон для розблокованих */
+}
+
+.achievement-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.achievement-name {
+  font-weight: 600;
+  color: #e5e7eb; /* gray-200 */
+}
+
+.achievement-description {
+  font-size: 0.875rem;
+  color: #9ca3af; /* gray-400 */
+  margin-top: 0.1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Обмежити двома рядками */
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.achievement-unlocked-date {
+    font-size: 0.75rem;
+    color: #6b7280; /* gray-500 */
+    margin-top: 0.2rem;
+}
+
+.achievement-points {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #facc15; /* yellow-400 */
+  white-space: nowrap;
+  margin-left: auto; /* Притиснути до правого краю */
+} 

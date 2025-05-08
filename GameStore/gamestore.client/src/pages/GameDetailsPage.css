@@ -1,0 +1,229 @@
+/* Іконки (припускаючи використання Font Awesome) */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* GameDetailsPage.css */
+
+.game-details-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Темний фон */
+    color: #e0e0e0; /* Світлий текст */
+    border-radius: 8px;
+}
+
+.game-header {
+    position: relative;
+    height: 400px; /* Висота хедера */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: flex-end; /* Розмістити контент знизу */
+    padding: 20px;
+    box-shadow: inset 0 -150px 100px -50px rgba(0,0,0,0.8); /* Затемнення знизу */
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 60%); /* Градієнт для кращої читабельності тексту */
+    border-radius: 8px 8px 0 0;
+}
+
+.game-cover-image {
+    width: 180px; /* Фіксована ширина */
+    height: 270px; /* Фіксована висота */
+    object-fit: cover; /* Обрізати зображення, щоб заповнити контейнер */
+    border-radius: 4px;
+    margin-right: 20px;
+    z-index: 1; /* Над оверлеєм */
+    border: 2px solid #444;
+}
+
+.header-info {
+    z-index: 1; /* Над оверлеєм */
+    color: #fff;
+}
+
+.header-info h1 {
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.header-info p {
+    margin: 0 0 15px 0;
+    font-size: 1em;
+    color: #ccc;
+}
+
+.tags .tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.game-actions-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2a2a2a; /* Трохи світліший фон */
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 20px;
+}
+
+.price-section {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #4CAF50; /* Зелений колір ціни */
+}
+
+.price-section.discounted {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 0.7em;
+}
+
+.current-price {
+    color: #4CAF50; /* Яскраво-зелений для зниженої ціни */
+}
+
+.discount-badge {
+    background-color: #f44336; /* Червоний фон для знижки */
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.action-buttons button i {
+    margin-left: 8px;
+}
+
+.wishlist-button {
+    background-color: #607D8B; /* Синьо-сірий */
+    color: white;
+}
+
+.wishlist-button.active {
+    background-color: #FF4081; /* Рожевий, коли активний */
+}
+
+.wishlist-button:hover:not(.active):not(:disabled) {
+    background-color: #78909C;
+}
+
+.purchase-button {
+    background-color: #4CAF50; /* Зелений */
+    color: white;
+}
+
+.purchase-button.owned {
+    background-color: #FF9800; /* Оранжевий, коли придбано */
+    cursor: default;
+}
+
+.purchase-button:hover:not(.owned):not(:disabled) {
+    background-color: #66BB6A;
+}
+
+.action-buttons button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.game-content section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+}
+
+.game-content h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    color: #03A9F4; /* Світло-синій для заголовків секцій */
+}
+
+.game-trailer iframe {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Адаптивна сітка */
+    gap: 10px;
+}
+
+.screenshot-image {
+    width: 100%;
+    height: 150px; /* Фіксована висота для скріншотів */
+    object-fit: cover; /* Обрізати для заповнення */
+    border-radius: 4px;
+    cursor: pointer; /* Можна додати лайтбокс */
+    transition: transform 0.2s ease;
+}
+
+.screenshot-image:hover {
+    transform: scale(1.05);
+}
+
+.system-requirements .requirements-columns {
+    display: flex;
+    gap: 30px;
+}
+
+.system-requirements .requirements-columns > div {
+    flex: 1;
+}
+
+.system-requirements h3 {
+    color: #FFC107; /* Жовтий для підзаголовків вимог */
+    margin-bottom: 10px;
+}
+
+.system-requirements p {
+    white-space: pre-wrap; /* Зберегти переноси рядків з бекенду */
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.error-message {
+    color: #f44336;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+/* Іконки (припускаючи використання Font Awesome) */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'); */ /* Видалено звідси */ 

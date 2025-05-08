@@ -1,0 +1,54 @@
+/* BundlesPage.css */
+.bundles-container {
+  padding: 2rem;
+}
+.bundles-container h1 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.bundle-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.bundle-card {
+  background: var(--bg-color-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bundle-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.bundle-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  color: var(--accent-color);
+}
+.bundle-card p {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+.bundle-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.bundle-card a:hover {
+  opacity: 0.8;
+}
+.bundle-image {
+  width: 100%; /* Make image fill card width */
+  height: 150px; /* Fixed height */
+  object-fit: cover; /* Cover the area, might crop */
+  border-radius: 6px 6px 0 0; /* Round top corners */
+  margin-bottom: 1rem; /* Space below image */
+} 

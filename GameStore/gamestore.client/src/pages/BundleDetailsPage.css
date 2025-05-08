@@ -1,0 +1,120 @@
+/* BundleDetailsPage.css */
+.bundle-details-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: var(--bg-color-secondary);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  color: var(--text-color);
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.bundle-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.bundle-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+.bundle-price {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.add-bundle-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.add-bundle-button:hover {
+  background-color: var(--accent-color-hover);
+}
+.bundle-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.bundle-table th,
+.bundle-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-color-tertiary);
+}
+.bundle-table th {
+  font-weight: bold;
+  color: var(--text-color-secondary);
+}
+.bundle-game-list {
+  list-style: none;
+  padding: 0;
+}
+.bundle-game-list li {
+  padding: 0.5rem 0;
+}
+.bundle-game-link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+.bundle-game-link:hover {
+  text-decoration: underline;
+}
+
+/* Main banner image */
+.bundle-banner-image {
+  width: 100%;
+  height: 250px; /* Or adjust as needed */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+/* Grid for games in bundle */
+.bundle-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjust size as needed */
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.bundle-game-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--bg-color-tertiary);
+  border-radius: 6px;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+.bundle-game-item:hover {
+  background-color: var(--bg-color-hover);
+}
+
+.bundle-game-image {
+  width: 100%;
+  height: 100px; /* Adjust height */
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.bundle-game-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.3;
+} 
