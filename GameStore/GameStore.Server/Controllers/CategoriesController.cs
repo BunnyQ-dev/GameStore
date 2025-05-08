@@ -59,7 +59,7 @@ namespace Games_Store.Controllers
         {
             if (await _context.Genres.AnyAsync(g => g.Name == category.Name))
             {
-                return Conflict("Категорія з такою назвою вже існує");
+                return Conflict("Category with this name already exists");
             }
 
             var genre = new Genre
@@ -92,7 +92,7 @@ namespace Games_Store.Controllers
 
             if (category.Name != genre.Name && await _context.Genres.AnyAsync(g => g.Name == category.Name))
             {
-                return Conflict("Категорія з такою назвою вже існує");
+                return Conflict("Category with this name already exists");
             }
 
             genre.Name = category.Name;
@@ -132,7 +132,7 @@ namespace Games_Store.Controllers
             var hasGames = await _context.GameGenres.AnyAsync(gg => gg.GenreId == id);
             if (hasGames)
             {
-                return BadRequest("Не можна видалити категорію, яка містить ігри");
+                return BadRequest("Cannot delete category because it contains games");
             }
 
             _context.Genres.Remove(genre);

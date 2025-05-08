@@ -44,7 +44,7 @@ namespace Games_Store.Controllers
 
             if (await _context.Genres.AnyAsync(g => g.Name == genreDto.Name))
             {
-                return Conflict(new { message = "Жанр з такою назвою вже існує." });
+                return Conflict(new { message = "Genre with this name already exists." });
             }
 
             var genre = new Genre { Name = genreDto.Name };
@@ -62,12 +62,12 @@ namespace Games_Store.Controllers
             var genre = await _context.Genres.FindAsync(id);
             if (genre == null)
             {
-                return NotFound(new { message = "Жанр не знайдено." });
+                return NotFound(new { message = "Genre not found." });
             }
 
             if (await _context.Genres.AnyAsync(g => g.Name == genreDto.Name && g.Id != id))
             {
-                return Conflict(new { message = "Жанр з такою назвою вже існує." });
+                return Conflict(new { message = "Genre with this name already exists." });
             }
 
             genre.Name = genreDto.Name;
@@ -91,13 +91,13 @@ namespace Games_Store.Controllers
             var genre = await _context.Genres.FindAsync(id);
             if (genre == null)
             {
-                return NotFound(new { message = "Жанр не знайдено." });
+                return NotFound(new { message = "Genre not found." });
             }
 
             var isUsed = await _context.GameGenres.AnyAsync(gg => gg.GenreId == id);
             if (isUsed)
             {
-                 return Conflict(new { message = "Неможливо видалити жанр, оскільки він використовується в іграх." });
+                 return Conflict(new { message = "Cannot delete genre because it is used in games." });
             }
 
             _context.Genres.Remove(genre);
@@ -125,7 +125,7 @@ namespace Games_Store.Controllers
 
             if (await _context.Developers.AnyAsync(d => d.Name == developerDto.Name))
             {
-                return Conflict(new { message = "Розробник з такою назвою вже існує." });
+                return Conflict(new { message = "Developer with this name already exists." });
             }
 
             var developer = new Developer { Name = developerDto.Name };
@@ -141,11 +141,11 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var developer = await _context.Developers.FindAsync(id);
-            if (developer == null) return NotFound(new { message = "Розробника не знайдено." });
+            if (developer == null) return NotFound(new { message = "Developer not found." });
 
             if (await _context.Developers.AnyAsync(d => d.Name == developerDto.Name && d.Id != id))
             {
-               return Conflict(new { message = "Розробник з такою назвою вже існує." });
+                return Conflict(new { message = "Developer with this name already exists." });
             }
 
             developer.Name = developerDto.Name;
@@ -158,11 +158,10 @@ namespace Games_Store.Controllers
         public async Task<IActionResult> DeleteDeveloper(int id)
         {
             var developer = await _context.Developers.FindAsync(id);
-            if (developer == null) return NotFound(new { message = "Розробника не знайдено." });
-
+            if (developer == null) return NotFound(new { message = "Developer not found." });
 
             var isUsed = await _context.Games.AnyAsync(g => g.Developer != null && g.Developer.Id == id);
-            if (isUsed) return Conflict(new { message = "Неможливо видалити розробника, оскільки він використовується в іграх." });
+            if (isUsed) return Conflict(new { message = "Cannot delete developer because it is used in games." });
 
             _context.Developers.Remove(developer);
             await _context.SaveChangesAsync();
@@ -188,7 +187,7 @@ namespace Games_Store.Controllers
 
             if (await _context.Publishers.AnyAsync(p => p.Name == publisherDto.Name))
             {
-                return Conflict(new { message = "Видавець з такою назвою вже існує." });
+                return Conflict(new { message = "Publisher with this name already exists." });
             }
 
             var publisher = new Publisher { Name = publisherDto.Name };
@@ -204,11 +203,11 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var publisher = await _context.Publishers.FindAsync(id);
-            if (publisher == null) return NotFound(new { message = "Видавця не знайдено." });
+            if (publisher == null) return NotFound(new { message = "Publisher not found." });
 
             if (await _context.Publishers.AnyAsync(p => p.Name == publisherDto.Name && p.Id != id))
             {
-                return Conflict(new { message = "Видавець з такою назвою вже існує." });
+                return Conflict(new { message = "Publisher with this name already exists." });
             }
 
             publisher.Name = publisherDto.Name;
@@ -221,10 +220,10 @@ namespace Games_Store.Controllers
         public async Task<IActionResult> DeletePublisher(int id)
         {
             var publisher = await _context.Publishers.FindAsync(id);
-            if (publisher == null) return NotFound(new { message = "Видавця не знайдено." });
+            if (publisher == null) return NotFound(new { message = "Publisher not found." });
 
             var isUsed = await _context.Games.AnyAsync(g => g.Publisher != null && g.Publisher.Id == id);
-            if (isUsed) return Conflict(new { message = "Неможливо видалити видавця, оскільки він використовується в іграх." });
+            if (isUsed) return Conflict(new { message = "Cannot delete publisher because it is used in games." });
 
             _context.Publishers.Remove(publisher);
             await _context.SaveChangesAsync();
@@ -249,7 +248,7 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             if (await _context.Platforms.AnyAsync(p => p.Name == platformDto.Name))
-                return Conflict(new { message = "Платформа з такою назвою вже існує." });
+                return Conflict(new { message = "Platform with this name already exists." });
 
             var platform = new Platform { Name = platformDto.Name };
             _context.Platforms.Add(platform);
@@ -264,10 +263,10 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var platform = await _context.Platforms.FindAsync(id);
-            if (platform == null) return NotFound(new { message = "Платформа не знайдена." });
+            if (platform == null) return NotFound(new { message = "Platform not found." });
 
             if (await _context.Platforms.AnyAsync(p => p.Name == platformDto.Name && p.Id != id))
-                return Conflict(new { message = "Платформа з такою назвою вже існує." });
+                return Conflict(new { message = "Platform with this name already exists." });
 
             platform.Name = platformDto.Name;
             _context.Entry(platform).State = EntityState.Modified;
@@ -288,10 +287,10 @@ namespace Games_Store.Controllers
         public async Task<IActionResult> DeletePlatform(int id)
         {
             var platform = await _context.Platforms.FindAsync(id);
-            if (platform == null) return NotFound(new { message = "Платформа не знайдена." });
+            if (platform == null) return NotFound(new { message = "Platform not found." });
 
             var isUsed = await _context.GamePlatforms.AnyAsync(gp => gp.PlatformId == id);
-            if (isUsed) return Conflict(new { message = "Неможливо видалити платформу, оскільки вона використовується в іграх." });
+            if (isUsed) return Conflict(new { message = "Cannot delete platform because it is used in games." });
 
             _context.Platforms.Remove(platform);
             await _context.SaveChangesAsync();
@@ -458,7 +457,7 @@ namespace Games_Store.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            if (!await _context.Games.AnyAsync(g => g.Id == achievementDto.GameId)) return NotFound(new { message = "Гра не знайдена"});
+            if (!await _context.Games.AnyAsync(g => g.Id == achievementDto.GameId)) return NotFound(new { message = "Game not found"});
 
             var achievement = new Achievement
             {
@@ -487,10 +486,10 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var achievement = await _context.Achievements.FindAsync(id);
-            if (achievement == null) return NotFound(new { message = "Досягнення не знайдено." });
+            if (achievement == null) return NotFound(new { message = "Achievement not found." });
 
             // Перевірка гри, якщо потрібно
-            if (achievementDto.GameId > 0 && !await _context.Games.AnyAsync(g => g.Id == achievementDto.GameId)) return NotFound(new { message = "Гра не знайдена"});
+            if (achievementDto.GameId > 0 && !await _context.Games.AnyAsync(g => g.Id == achievementDto.GameId)) return NotFound(new { message = "Game not found"});
 
             achievement.Name = achievementDto.Name;
             achievement.Description = achievementDto.Description;
@@ -506,11 +505,11 @@ namespace Games_Store.Controllers
         public async Task<IActionResult> DeleteAchievement(int id)
         {
             var achievement = await _context.Achievements.FindAsync(id);
-            if (achievement == null) return NotFound(new { message = "Досягнення не знайдено." });
+            if (achievement == null) return NotFound(new { message = "Achievement not found." });
 
             // Перевірка, чи досягнення використовується (наприклад, у UserAchievements)
             var isUsed = await _context.UserAchievements.AnyAsync(ua => ua.AchievementId == id);
-            if (isUsed) return Conflict(new { message = "Неможливо видалити досягнення, оскільки воно вже отримано користувачами." });
+            if (isUsed) return Conflict(new { message = "Cannot delete achievement because it has been obtained by users." });
 
             _context.Achievements.Remove(achievement);
             await _context.SaveChangesAsync();
@@ -542,7 +541,7 @@ namespace Games_Store.Controllers
         public async Task<IActionResult> UpdateUser(string id, [FromBody] UserAdminUpdateDto dto)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if (user == null) return NotFound(new { message = "Користувача не знайдено." });
+            if (user == null) return NotFound(new { message = "User not found." });
 
             user.IsActive = dto.IsActive;
             var updateResult = await _userManager.UpdateAsync(user);
@@ -571,13 +570,13 @@ namespace Games_Store.Controllers
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
             var user = await _userManager.FindByIdAsync(id);
-            if (user == null) return NotFound(new { message = "Користувача не знайдено." });
+            if (user == null) return NotFound(new { message = "User not found." });
 
             if (!await _context.Achievements.AnyAsync(a => a.Id == dto.AchievementId))
-                return NotFound(new { message = "Досягнення не знайдено." });
+                return NotFound(new { message = "Achievement not found." });
 
             if (await _context.UserAchievements.AnyAsync(ua => ua.UserId == id && ua.AchievementId == dto.AchievementId))
-                return Conflict(new { message = "Користувач уже має це досягнення." });
+                return Conflict(new { message = "User already has this achievement." });
 
             var userAchievement = new UserAchievement
             {
@@ -588,7 +587,7 @@ namespace Games_Store.Controllers
             _context.UserAchievements.Add(userAchievement);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Досягнення успішно додано користувачу." });
+            return Ok(new { message = "Achievement successfully added to user." });
         }
 
         // GET: api/admin/manage/users/{id}
@@ -596,7 +595,7 @@ namespace Games_Store.Controllers
         public async Task<ActionResult<UserAdminDetailsDto>> GetUserDetails(string id)
         {
             var user = await _userManager.FindByIdAsync(id);
-            if (user == null) return NotFound(new { message = "Користувача не знайдено." });
+            if (user == null) return NotFound(new { message = "User not found." });
 
             var roles = await _userManager.GetRolesAsync(user);
             var userDetails = new UserAdminDetailsDto
@@ -617,7 +616,7 @@ namespace Games_Store.Controllers
         [HttpGet("users/{id}/achievements")]
         public async Task<ActionResult<IEnumerable<UserAchievementDto>>> GetUserAchievements(string id)
         {
-            if (!await _userManager.Users.AnyAsync(u => u.Id == id)) return NotFound(new { message = "Користувача не знайдено." });
+            if (!await _userManager.Users.AnyAsync(u => u.Id == id)) return NotFound(new { message = "User not found." });
 
             var achievements = await _context.UserAchievements
                 .Where(ua => ua.UserId == id)

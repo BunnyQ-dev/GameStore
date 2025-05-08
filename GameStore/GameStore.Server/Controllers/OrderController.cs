@@ -314,13 +314,13 @@ namespace Games_Store.Controllers
 
                 await transaction.CommitAsync();
 
-                return Ok(new { message = "Замовлення успішно оформлено.", orderId = order.Id });
+                return Ok(new { message = "Order successfully placed.", orderId = order.Id });
             }
             catch (Exception ex)
             {
                 await transaction.RollbackAsync();
                 Console.WriteLine($"Checkout error: {ex}"); 
-                return StatusCode(500, "Сталася помилка під час оформлення замовлення.");
+                return StatusCode(500, "An error occurred while placing the order.");
             }
         }
         

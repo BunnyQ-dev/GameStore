@@ -45,14 +45,14 @@ namespace Games_Store.Controllers
             if (userId == null) return Unauthorized();
 
             var gameExists = await _context.Games.AnyAsync(g => g.Id == gameId);
-            if (!gameExists) return NotFound("Гру не знайдено.");
+            if (!gameExists) return NotFound("Game not found.");
 
             var alreadyInWishlist = await _context.Wishlists
                 .AnyAsync(w => w.GameId == gameId && w.UserId == userId);
 
             if (alreadyInWishlist)
             {
-                return BadRequest("Гра вже у списку бажаного.");
+                return BadRequest("Game already in wishlist.");
             }
 
             var wishlistItem = new Wishlist
@@ -65,7 +65,7 @@ namespace Games_Store.Controllers
             _context.Wishlists.Add(wishlistItem);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Гру додано до списку бажаного." });
+            return Ok(new { message = "Game added to wishlist." });
         }
 
         // DELETE: api/wishlist/{gameId}
@@ -80,13 +80,13 @@ namespace Games_Store.Controllers
 
             if (wishlistItem == null)
             {
-                return NotFound("Гру не знайдено у списку бажаного.");
+                return NotFound("Game not found in wishlist.");
             }
 
             _context.Wishlists.Remove(wishlistItem);
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Гру видалено зі списку бажаного." });
+            return Ok(new { message = "Game removed from wishlist." });
         }
         
         // GET: api/wishlist

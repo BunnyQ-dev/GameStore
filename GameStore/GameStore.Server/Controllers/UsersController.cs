@@ -237,7 +237,7 @@ namespace Games_Store.Controllers
             if (string.IsNullOrEmpty(webRootPath))
             {
                 Console.Error.WriteLine("IWebHostEnvironment.WebRootPath is null or empty. Check wwwroot configuration and static file serving.");
-                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Помилка конфігурації сервера для роботи з файлами." });
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "Server configuration error for file operations." });
             }
 
             user.DisplayName = DisplayName;
@@ -249,7 +249,7 @@ namespace Games_Store.Controllers
             {
                 if (!AvatarFile.ContentType.StartsWith("image/"))
                 {
-                     return BadRequest(new { message = "Непідтримуваний тип файлу для аватара." });
+                     return BadRequest(new { message = "Unsupported file type for avatar." });
                 }
 
                 if (!string.IsNullOrEmpty(user.ProfilePictureUrl) && user.ProfilePictureUrl != "/img/default-avatar.jpg")
@@ -292,7 +292,7 @@ namespace Games_Store.Controllers
                           catch (IOException ex) { /* Log deletion error */ }
                      }
                 }
-                return BadRequest(new { message = "Помилка оновлення профілю", errors = result.Errors.Select(e => e.Description) });
+                return BadRequest(new { message = "Profile update error", errors = result.Errors.Select(e => e.Description) });
             }
 
 

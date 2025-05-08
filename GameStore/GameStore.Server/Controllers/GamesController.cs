@@ -551,7 +551,7 @@ namespace Games_Store.Controllers
 
             if (!games.Any())
             {
-                return NotFound($"Не знайдено ігор для жанру з ID {genreId}.");
+                return NotFound($"No games found for genre with ID {genreId}.");
             }
 
             var gameDtos = games.Select(g => DtoMapper.MapGameToDto(g, ownedGameIds)).ToList(); // Map in memory
@@ -581,7 +581,7 @@ namespace Games_Store.Controllers
 
             if (!games.Any())
             {
-                return NotFound($"Не знайдено ігор для платформи з ID {platformId}.");
+                return NotFound($"No games found for platform with ID {platformId}.");
             }
             
             var gameDtos = games.Select(g => DtoMapper.MapGameToDto(g, ownedGameIds)).ToList(); // Map in memory
@@ -719,7 +719,7 @@ namespace Games_Store.Controllers
 
             if (review == null)
             {
-                return NotFound("Ви ще не залишили відгук для цієї гри.");
+                return NotFound("You have not left a review for this game.");
             }
 
             return Ok(review);
@@ -734,11 +734,11 @@ namespace Games_Store.Controllers
             if (string.IsNullOrEmpty(userId)) return Unauthorized();
 
             var gameExists = await _context.Games.AnyAsync(g => g.Id == gameId);
-            if (!gameExists) return NotFound("Гру не знайдено.");
+            if (!gameExists) return NotFound("Game not found.");
 
             if (reviewDto.Rating < 1 || reviewDto.Rating > 5) 
             {
-                return BadRequest("Рейтинг має бути від 1 до 5.");
+                return BadRequest("Rating must be between 1 and 5.");
             }
 
             var existingReview = await _context.GameRatings
@@ -791,7 +791,7 @@ namespace Games_Store.Controllers
 
             if (reviewToDelete == null)
             {
-                return NotFound("Ваш відгук для цієї гри не знайдено.");
+                return NotFound("Your review for this game was not found.");
             }
 
             _context.GameRatings.Remove(reviewToDelete);

@@ -10,4 +10,4 @@ namespace Games_Store.Models
         
         public DateTime FriendshipDate { get; set; } = DateTime.UtcNow;
     }
-} 
+}
